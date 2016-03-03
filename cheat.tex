@@ -127,6 +127,266 @@ If $gcd(a,b) = 1$ then we say that $a$ and $b$ are \textbf{coprime}. In this cas
 A positive integer $p$ is a \textbf{prime} if $p \geq 2$ and the only positive integers which divide $p$ are 1 and $p$ itself.\\
 If $p$ is a prime and $x_1, x_2, \dotsc ,x_n$ are any integers such that $p|x_1 x_2 \dots x_n$ then $p|x_i$ for some $x_i(1 \leq i \leq n)$.\\
 (The Fundamental Theorem of Arithmetic) A positive integer $n \geq 2$ has a unique prime factorization, apart from the order of the factors.\\
+$\frac{a}{c} \oplus \frac{c}{d} = \frac{ad + bc}{bd}$\\
+$\left( \frac{a}{b} \right)^{-1} = \frac{b}{a} (a,b \neq 0)$\\
+Between any two rational numbers there is another one.\\
+There are no natural numbers $m, n$ such that $m^2 =2n$.\\
+Example: 0.5734 meaning $\frac{5}{10} + \frac{7}{100} + \frac{3}{1000}
++ \frac {4}{10000}$.\\
+The set of $mathbb{Q}$ of rational numbers is countable.\\
+If $A$ and $B$ are non-empty finite sets, and $A$ and $B$ are disjoint
+(that is $A \cap B = \varnothing$, the empty set), then $|A \cup B| =
+|A| + |B|$.\\
+Let $X$ and $Y$ be finite non-empty sets, and let $S$ be a subset of
+$X \times Y$. Then the following results hold.
+(i) The size of $S$ is given by $|S| = \displaystyle\sum_{x \in X} r_{x}(S) =
+\displaystyle\sum_{y \in Y} c_{y}(S)$ where $r_{x}(S)$ and $c_{y}(S)$
+are the row and column totals as described above.
+(ii) If $r_{x}(S)$ is a constant $r$, inependent of $x$ and $c_{y}(S)$
+is a constant $c$, independent of $y$, then $r|X| = c|Y|$.
+(iii) (The multiplication principle) The size of $X \times Y$ is given
+by $|X \times Y| = |X| \times |Y|$.\\
+\textbf{Eulers's function}: let $\phi(n)$ denote the number of
+integers $x$ in the range $1 \leq x \leq n$ such that $x$ and $n$ are
+coprime. $\phi(p) = p-1$ ($p$ prime).\\
+For any positive integer $n$, $\displaystyle\sum_{d|n} \phi(d)=n$.\\
+Let $X$ and $Y$ be non-empty finite sets, and let $F$ denote the set
+of functions from $X$ to $Y$. if $|X| = m$ and $|Y| = n$, then $|F| =
+n^{m}$. Equivalently, we may say that the number of words of length
+$m$ in an alphabet $Y$ of $n$ symbols is $n^{m}$. In general we can
+say that a funciton from $\mathbb{N}_{m}$ to $Y$ is a mathematical
+model of an \textit{ordered selection with repetition of $m$ things
+  from the set $Y$}.\\
+The number of ordered selections, without repetition, of $m$ things
+from a set $Y$ of size $n$ is the same as the number of injections
+from $\mathbb{N}_{m}$ to $Y$, and is given by $n(n-1)(n-2)\dots(n-m+1)$.\\
+The following properties hold in the set $S_{n}$ of all permutations
+of $\{1,2,\dots,n\}$. (i) If $\pi$ and $\sigma$ are in $S_{n}$, so is
+$\pi\sigma$. (ii) For any permutations $\pi, \sigma, \tau$ in $S_{n}$,
+$(\pi\sigma)\tau = \pi(\sigma\tau)$.
+(iii) The identity function, denoted by id an defined by $id(r) = r$
+for all $r$ in $\mathbb{N}_{n}$, is a permutation and for any $\sigma$
+in $S_{n}$ we have $id \sigma = \sigma id = \sigma$.
+(iv) For every permutation $\pi$ in $S_{n}$ there is an inverse
+permutation $\pi^{-1} = \pi^{-1}\pi = id$.\\
+\textit{Unordered selection without repetition}: $\binom{n}{r}$ spoken
+\textit{n choose r}. \\
+If $n$ and $r$ are positive integers satisfying $1 \leq r \leq n$ then
+$\binom{n}{r} = \binom{n-1}{r-1} + \binom{n-1}{r}$.\\
+If $n$ and $r$ are positive integers satisfying $1 \leq r \leq n$,
+then $\binom{n}{r} =
+\frac{n(n-1)\dots (n-r+1)}{r!}=\frac{n!}{r!(n-r)!}$.\\
+\textit{unordered selections with repetition}, The number of unordered
+selections, with repetition, of $r$ objects from a set of $n$ objects
+is: $\binom{n+r-1}{r} = \binom{n+r-1}{n-1}$. Since the selections are
+unordered, we may arrange matters so that, within each selection, all
+the objects of one given kind come first, followed by the objects of
+another kind, and so on.\\
+Let $n$ be a positive integer. The coefficient of the term
+$a^{n-r}b^{r}$ in the expansion of $(a + b)^{n}$ is the binominal
+number $\binom{n}{r}$. Explicitly, we have
+$(a+b)^{n}=\binom{n}{0}a^{n}+ \binom{n}{1}a^{n-1}b+ \binom{n}{2}a^{n-2}b^{2}+\dots+\binom{n}{n}b^{n}$.\\
+If $A_{1},A_{2},\dots,A_{n}$ are finite sets then $|A_{1} \cup A_{2}
+\cup \dots A_{n}| =
+\alpha_{1}-\alpha_{2}+\alpha_{3}-\dots+(-1)^{n-1}\alpha_{n}$, where
+$\alpha_{i}$ is the sum of the cardinalities of the intersections of
+the sets taken $i$ at a time $(1 \leq i \leq n)$.\\
+Let $S(n,k)$ denote the number of partitions of an n-set $X$ into $k$
+parts, where $1 \leq k \leq n$. Then $S(n,1) = 1$, $S(n,n) = 1$,
+$S(n,k) = S(n-1, k-1) + kS(n-1,k)$ $(2 \leq k \leq n-1)$.\\
+The numbers $S(n,k)$ are sometimes called \textbf{Stirling Numbers}
+(of the second kind). As a consequence of Theorem 12.1 they may be
+tabulated in much the same way as the binominal numbers are arranged
+in Pascal's triangle.\\
+If $R$ is an equivalence relation on a set $X$ then the distinct
+equivalence classes with respect to $R$ form a partition of $X$.\\
+Let $J$ denote the set of surjections from an $n$-set $X$ to a $k$-set
+$Y$. Then $|J| = k!S(n,k)$.\\
+Given any positive integers $n, n_{1}, \dots ,n_{k}$ satisfying
+$n_{1} + n_{2} + \dots + n_{k} = n$, we have
+$\binom{n}{n_{1},n_{2},\dots,n_{k}}=\frac{n!}{n_{1}!n_{2}!\dots
+  n_{k}!}$.\\
+For any positive integers $n$ and $k$ $(x_{1}+ x_{2} + \dots
++ x_{k})^{n} = \sum \binom{n}{n_{1},n_{2}, \dots
+  ,n_{k}} x_{1}^{n_{1}} x_{2}^{n_{2}} \dots x_{k}^{n_{k}}$, where the sum
+    is taken over all k-tuples of non-negative integers $(n_{1},
+    n_{2}, \dots, n_{k})$ such that $n_{1}+n_{2}+ \dots + n_{k} = n$.\\   
+Let $x_{1}$ and $x_{2}$ be integers, and $m$ a positive integer. We
+say that $x_{1}$ is \textbf{congruent} to $x_{2}$ \textbf{modulo} $m$,
+and write $x_{1} \equiv x_{2}$ (mod $m$) whenever $x_{1} - x_{2}$ is
+divisible by $m$.\\
+Let $m$ be a positive integer and $x_{1}, x_{2}, y_{1}, y_{2}$
+integers such that $x_{1} \equiv x_{2}$ (mod $m$), $y_{1} \equiv y_{2}$
+(mod $m$). Then (i) $x_{1} + y_{1} \equiv x_{2} + y_{2}$ (mod $m$), (ii)
+$x_{1}y_{1} \equiv x_{2}y_{2}$ (mod $m$).\\
+The set of \textbf{integers modulo m}, written as $mathbb{Z}_{m}$, is
+the set of distinct equivalence classes under the relation of
+congurence modulo $m$ in $\mathbb{Z}$.\\
+The operations $\oplus$ and $\otimes$ satisfy the following rules,
+where $a,b,c$ denote any members of $\mathbb{Z}_{m}$, and $0
+= [0]_{m}$, $1 = [1]_{m}$.
+\textbf{M1}$a \oplus b$ and $a \otimes b$ are in $\mathbb{Z}_{m}$.
+\textbf{M2}$a \oplus b = b \oplus a$, $a \otimes b = b \otimes a$.
+\textbf{M3}$(a \oplus b) \oplus c = a \oplus (b \oplus c)$, $(a
+\otimes b) \otimes c = a \otimes (b \otimes c)$.
+\textbf{M4}$a \oplus 0 = a$, $a \otimes 1 = a$.
+\textbf{M5}$a \otimes (b \oplus c) = (a \otimes b) \oplus (a \otimes c)$.
+\textbf{M6}For each $a$ in $\mathbb{Z}_{m}$ there is  an unique
+element $-a$ in $\mathbb{Z}_{m}$ such that $a \oplus(-a) = 0)$.\\
+An element $r$ in $\mathbb{Z}_{m}$ is said to be \textbf{invertible}
+if there is some $x$ in $\mathbb{Z}_{m}$ such that $rx = 1$ in
+$\mathbb{Z}_{m}$. In the case, $x$ is called the \textbf{inverse} of
+$r$, and we write $x = r^{-1}.$.\\
+The element $r$ in $\mathbb{Z}_{m}$ is invertible if and only if $r$
+and $m$ are coprime in $\mathbb{Z}$. in particular, when $p$ is a
+prime every element of $\mathbb{Z}_{p}$ except 0 is invertible.\\
+If $y$ is invertible in $\mathbb{Z}_{m}$ then $y^{\phi (m)} = 1$ in
+$\mathbb{Z}_{m}$.\\
+\textbf{Euler's Theorem}: if gcd($y$,$m$) = 1 then $y^{\phi (m)}
+\equiv 1$ (mod $m$).\\
+\textbf{Fermat's Theorem}: if $p \nmid y$ then $y^{p-1} \equiv 1$ (mod
+$p$).\\
+A \textbf{latin square} of order $n$ is an $n \times n$ array in which
+each one of $n$ symbols occurs once in each row and once in each
+column.\\
+Let $p$ be a prime and $t$ a non-zero element of
+$\mathbb{Z}_{p}$. Then the rule $L_{t}(i,j) =ti+j$ $(i,j \in
+\mathbb{Z}_{p})$ defines a latin square. Furthermore, when $t \nmid u$
+the latin square $L_{t}$ and $L_{u}$ are orthogonal.\\
+Let $f$ be a function from $\mathbb{N}$ to $\mathbb{N}$. We say that
+$f(n)$ is $O(g(n))$ if there is a positive constant $k$ such that
+$f(n) \leq kg(n)$ for all $n$ in $\mathbb{N}$ (with possibly a finite
+number of exceptions). The symbol $(O(g(n))$ is pronounced `big-oh of
+$g(n)$'\\
+\textbf{bubblesort} Compare adjacent terms in the list and switch them
+if they are in the wrong order. The operations involved in bubble sort
+are comparisons and switches. At the $j$th path, $n-m$ comparisons are
+made, adn so the total nmber of comparisons is $(n-1)+(n-2)+ \dots + 2
++ 1 = \frac{1}{2}n(n-1)$, which is $n^{2}$.
+\textbf{listsort} The basic idea of insertion sorting is to begin with
+the list $L = (x_{1})$ and insert $x{i}$ in its correct place in the
+list for $i = 2,3,\dots ,n$. Insertions can be done
+\textbf{sequential} or preferentially by the \textbf{bisection}
+method.\\
+A \textbf{graph $G$} consists of a finite set $V$, whose members are
+called \textbf{vertices}, and a set $E$ of 2-subsets of $V$, whose
+members are called \textbf{edges}. We usually write $G = (V,E)$ and
+say that $V$ is the \textbf{vertex set} and $E$ is the \textbf{edge
+  set}.\\
+Let us say that two vertices $x$ and $y$ of a graph are $adjacent$
+whenever $\{x,y\}$ is an edge. (We say also that $x$ and $y$ are
+\textbf{neighbours}.) Then we can represent a graph $G = (V,E)$ by its
+\textbf{adjacency list}, wherein each vertex $v$ heads a list of those
+vertices adjacent to $v$.\\
+Two graphs $G_{1}$ and $G_{2}$ are said to be \textbf{isomorphic} when
+there is a bijection $\alpha$ from the vertex set of $G_{1}$ to the
+vertex set of $G_{2}$ such that $\{\alpha(x), \alpha(y)\}$ is an edge
+of $G_{2}$ if and only if $\{x, y\}$ is an edge of $G_{1}$. The
+bijection $\alpha$ is said to be an \textbf{isomorphism}.\\
+The \textbf{degree} of a vertex $v$ in a graph $G = (V,E)$ is the
+number of edges of $G$ which contain $v$. We shall use the notation
+$\delta(v)$ for the degree of $v$, so formally $\delta(v) = |D_{v}|$,
+where $D_{v} = \{e \in E | v \in e \}$.\\
+The sum of the values of the degree $\delta(v)$, taken over all the
+vertices $v$ of a graph $G = (V,E)$, is equal to twice the number of
+edges: $\displaystyle\sum_{v \in V} \delta(v) = 2|E|$.\\
+\textit{The number of odd vertices is even}.\\
+A \textbf{walk} in a graph $G$ is a sequence of vertices
+$v_{1},v_{2},\dots , v_{k},$ such that $v_{i}$ and $v_{i+1}$ are
+adjacent $(1 \leq i \leq k-1)$. If all its vertices are distinct, a
+walk is called a \textbf{path}.\\
+Suppose $G = (V,E)$ is a graph and the partition of $V$ corresponding
+to the equivalence relation ~ is $V = V_{1} \cup V_{2} \cup \dots \cup
+V_{r}$. Let $E_{i} (1 \leq i \leq r)$ denote the subset of $E$
+comprising those edges whose ends are both in $V_{i}$. Then the graphs
+$G_{i} = (V_{i}, E_{i})$ are called the \textbf{components} of $G$. If
+$G$ has just one component, it is said to be \textbf{connected}.\\
+We say that a graph $T$ is a \textbf{tree} if it has two properties:
+(T1) $T$ is connected; (T2) there are no cycles in $T$.\\
+If $T = (V,E)$ is a tree with at least two vertices, then: (T3) for
+each pair of $x,y$ of vertices there is a unique path in $T$ from $x$
+to $y$, (T4) the graph obtained from $T$ by removing any edge has two
+components, each of which is a tree; (T5) $|E| = |V|-1$\\
+A \textbf{vertex coloring} of a graph $G = (V,E)$ is a function $c: V
+\to \mathbb{N}$ with the property that $c(x) /neq c(y)$ whenever
+$\{x,y\} \in E$. The \textbf{chromatic number} of $G$, written
+$\chi(G)$, is defined to be the least integer $k$ for which there is a
+vertex coloring of $G$ using $k$ colors.\\
+\textbf{Greedy algorithm} for vertex coloring. Not always perfect, but
+ok. Suppose we have arranged the vertices in some order $v_{1}, v_{2},
+\dots ,v_{n}$. We assign color 1 to $v_{i}$ for each $v_{i}(2 \leq i
+\leq n)$ we form the set $S$ of colors assigned to vertices $v_{j}(1
+\leq j < i)$ which is adjacent to $v_{i}$; and we give $v_{i}$ the
+first color not in $S$.\\
+If $G$ is a graph with maximum degree $k$, then (i) $\chi(G) \leq k +
+1$, (ii) if $G$ is connected and not regular, $\chi(G) \leq k$.\\
+A graph is bipartite if and only if it contains no cycles with odd length.\\
+A vertex in a rooted tree is said to be a \textbf{leaf} if it is at
+level $i (i \geq 0)$ and it is not adjacent to any vertices at level
+$i + 1$. A vertex which is not a leaf is an \textbf{internal}
+vertex. The \textbf{height} of a rooted tree is the maximum value of
+$k$ for which level $k$ is not empty.\\
+The height of an $m$-ary rooted tree with $l$ leaves is at least
+$log_{m}l$.\\
+The \textbf{heapsort} algorithm involves two stages. First, the
+unsorted list is transformed into a special kind of list know as
+\textit{heap}, and secondly, the heap is transformed into the sorted
+list. The characteristic property of a heap is that each father is
+smaller than his sons. Heapsort $O(n$ log($n))$.\\
+Suppose that $G = (V, E)$ is a connected graph, and $T$ is a subset of
+$E$ such that (i) every vertex of $G$ belongs to an edge in $T$; (ii)
+the edges in $T$ form a tree. In this case, we say that $T$ is a
+\textbf{spanning tree} for $G$.\\
+\textbf{Minimum Spanning Tree MST} for the weighted graph $G$. A
+simple algorithm for the MST problem is based on applying the greedy
+principle to the tree-growing method given above. Specifically: at
+each stage we add the \textit{cheapest} edge joining a new vertex to
+the partial tree.\\
+Let $G = (V,E)$ be a connected graph with weight function $w: E \to
+\mathbb{N}$, and suppose that $T$ is a spanning tree for $G$
+constructed by the greedy algorithm, then $w(T) \leq w((U)$ for any
+spanning tree $U$ of $G$.\\
+\textbf{Depth-First-Search}. Let $v$ be a vertex of the graph $G$ and
+let $T$ be the subset of the edges of $G$ constructed according to the
+DFS method. Then $T$ is a spanning tree for the component of $G$ which
+contains $v$. (Stack procedure)\\
+\textbf{Breadth-First-Search}. Let $v$ be a vertex of the graph $G$,
+and let $T$ be  the subset of the edges of $G$ constructed according
+to the BFS algorithm. Then $T$ is a spanning tree for the component of
+$G$ which contains $v$. (Queue procedure)\\
+\textbf{shortest path problem} Dijkstras algorithm, greedy\\
+Let $G = (X \cup Y, E)$ be a bipartite graph and let $\delta(v)$
+denote the degree of a vertex $v$ in $G$. Then $\displaystyle\sum_{x
+  \in X} \delta(x) = \displaystyle\sum_{y \in Y} \delta(y) = |E|$.\\
+Let $G$ be a graph with edge set $E$. A coloring of $E$ is said to be
+an $edge coloring$ of $G$ if any two edges containing the same vertex
+have the different colors.\\
+If $G = (X \cup Y, E)$ is a bipartite graph, then the minimum number
+of colors needed for an edge coloring of $G$ is equal to the maximum
+degree of $G$.\\
+Any $m \times n$ latin rectangle with $1 \leq m \leq n$ can be
+completed to form an $n \times n$ latin square.\\
+Let $R$ be a partial $m \times p$ latin rectangle in which the symbols
+$\{s_{1}, s_{2}, \dots,s{n}\}$ are used, and let $n_{R}(s_{i})$ denote
+the number of times $s_{i}$ occours in $R(1 \leq i \leq n)$. Then $R$
+can be completed to an $n \times n$ latin square if and only if
+$n_{R}(s_{i}) \geq m + p - n$ $(1 \leq i \leq n)$.\\
+A \textbf{matching} in a bipartite graph $G = (X \cup Y, E)$ is a
+subset $M$ of $E$ with the property that no two edges in $M$ have a
+common vertex.\\
+We shall say that a matching $M$ is a \textbf{maximum matching} for $G
+=(X \cup Y,E)$ if no other matching has a greated cardinality. If $|M|
+= |X|$ (all the people get jobs), then we say that $M$ is a
+\textbf{complete matching}.\\
+If $G = (X \cup Y, E)$ and $A$ is a subset of $X$, let $J(A) = \{y \in
+Y | xy \in E$ for some $x \in A\}$ so that $J(A)$ is the set of jobs
+for which the people in $A$ are collectively qualified.\\
+The bipartite graph $G = (X \cup Y, E)$ hasd a complete matching if an
+oly if Hall's condition is satisfied, that is $|J(A)| \geq |A|$ for
+all $A \subseteq X$.\\ 
+
+
+
 
 % You can even have references
 \rule{0.3\linewidth}{0.25pt}
