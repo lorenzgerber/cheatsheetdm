@@ -20,10 +20,10 @@
 % if using A4 paper. (This probably isn't strictly necessary.)
 % If using another size paper, use default 1cm margins.
 \ifthenelse{\lengthtest { \paperwidth = 11in}}
-    { \geometry{top=.5in,left=.5in,right=.5in,bottom=.5in} }
+    { \geometry{top=.2in,left=.2in,right=.2in,bottom=.2in} }
     {\ifthenelse{ \lengthtest{ \paperwidth = 297mm}}
-        {\geometry{top=1cm,left=1cm,right=1cm,bottom=1cm} }
-        {\geometry{top=1cm,left=1cm,right=1cm,bottom=1cm} }
+        {\geometry{top=0.5cm,left=0.5cm,right=0.5cm,bottom=0.5cm} }
+        {\geometry{top=0.5cm,left=0.5cm,right=0.5cm,bottom=0.5cm} }
     }
 
 % Turn off header and footer
@@ -63,7 +63,7 @@
 \begin{document}
 \raggedright
 \footnotesize
-\begin{multicols}{3}
+\begin{multicols}{4}
 
 
 % multicol parameters
@@ -74,6 +74,7 @@
 \setlength{\multicolsep}{1pt}
 \setlength{\columnsep}{2pt}
 
+\textbf{NATURAL NUMBERS}\\
 $a+b \in \mathbb{N}$\\
 $a \times b \in \mathbb{N}$\\
 $a + b = b + a$\\
@@ -85,7 +86,8 @@ $m$ is a multiple of $n$ if there is a natural number $r$ such that $m = rn$\\
 If $a$ and $b$ are multiplies of $n$ the, for all $x, y \in \mathbb{N}, xa + yb$ is $a$ a multiple of $n$\\
 For any natural numbers $m$ and $n$, the statement $m < n$ means that there is some $x \in \mathbb{N}$ such that $m + x = n$\\
 If $a < b$ and $b < c$ then $a < c$\\
-Given any natural numbers $m$ and $n$, exactly one of the three statements $m<n, m=n, n<m$ is true.\\
+Given any natural numbers $m$ and $n$, exactly one of the three
+statements $m<n, m=n, n<m$ is true.\\
 Suppose that P(n) is a statement with the following properties:\\
 (i) $P(1)$ is true; \textit{induction basis}\\
 (ii) if $P(k)$ is true (\textit{induction hypothesis}) then $P(k+1)$ (\textit{induction step}) is true for every $k \in \mathbb{N}$.\\ 
@@ -93,18 +95,21 @@ Then $P(n)$ is true for all $n \in \mathbb{N}$\\
 strong: (ii) assume $P(i) 1 \leq i \leq k$ is true then $P(k+1)$ is true for every $k \in \mathbb{N}$\\
 Let $X$ be a subset of $\mathbb{N}$. An element $l \in X$ is a \textbf{least member} of $X$ if $l \leq x$ for all $x \in X$. An element $g \in X$ is a \textbf{greatest member} of $X$ if $g \geq x$ for all $x \in X$. Often $l$ and $g$ are referred to as the \textbf{minimum} and \textbf{maximum} of $X$.\\
 Every non-empty subset of $X$ of $\mathbb{N}$ has a least member.\\
-Suppose that $X$ and $Y$ are sets. We say that we have a \textbf{function} $f$ \textbf{from} $X$ \textbf{to} $Y$ if for each $x$ in $X$ we can specify a unque element in $Y$, which we denote by $f(x)$.\\
+\textbf{FUNCTIONS}\\
+Suppose that $X$ and $Y$ are sets. We say that we have a \textbf{function} $f$ \textbf{from} $X$ \textbf{to} $Y$ if for each $x$ in $X$ we can specify a unique element in $Y$, which we denote by $f(x)$.\\
 The function $f$ from $X$ to $Y$ is a \textbf{surjection} if every $y$ in $Y$ is a value $f(x)$ for at least one $x$ in $X$. It is an \textbf{injection} if every $y$ in $Y$ is a value $f(x)$ for at most one $x$ in $X$. It is a \textbf{bijection} if it is both a surjection and an injection, that is, if every $y$ in $Y$ is a value $f(x)$ for exactly one $x$ in $X$.\\
 For any set $X$ the function $i : X \to X$ defined by $i(x) = x$ for all $x \in X$ is called the \textbf{identity} function on $X$. If $X$ is a subset of $Y$, the function $j : X \to Y$ defined by $j(x) = x$ is called the \textbf{inclusion} function from $X$ to $Y$.\\
 If $f : X \to Y$ and $g : Y \to Z$ are injections, then so is the composite $gf : X \to Z$. If $f$ and $g$ are surjections then so is $gf$. if $f$ and $g$ are bijections then so is $gf$.\\
 A function $f : X \to Y$ has an \textbf{inverse} function $g : Y \to X$ if, for all $x$ in $X$ and $y$ in $Y$ $(gf)(x) = x, (fg)(y) = y$. In other words $gf$ is the identity function on $X$ and $fg$ is the identity function on $Y$.\\
 A function has an inverse if and only if it is a bijection.\\
+\textbf{HOW TO COUNT}\\
 Let $m$ be a natural number. Then the following statement is true for every natural number $n$: if there is an injection from $\mathbb{N}_n to \mathbb{N}_m$, then $n \leq m$.\\ 
 If there is a bijective correspondence between $S$ and $\mathbb{N}_m$ then we say that $S$ has size, or cardinality, $m$ and we write $|S| = m$.\\
 If a set $S$ is such that $|S| = s$ and $|S| = t$, then $s = t$.\\
 A set $S$ is \textbf{finite} if it is empty of if $|S| = n$ for some $n \in \mathbb{N}$. A set which is not finite is said to be \textbf{inifite}.\\
 The set $\mathbb{N}$ is infinite.\\
 If the set $S$ is such that there is a bijection $b : \mathbb{N} \to S$, then $S$ is infinite.\\
+\textbf{INTEGERS}\\
 A \textbf{relation} $R$ on a set $X$ is a set of ordered pairs of members of $X$.\\
 reflexive $xRx$, symmetric $xRy$, transitive $xRy$ and $yRz$ hence $xRz$\\
 An \textbf{equivalence relation} is a relation that is reflexive, symmetric and transitive.\\
@@ -120,20 +125,25 @@ For any $x \in \mathbb{Z}$ there is an element $-x$ of $\mathbb{Z}$ such that $x
 If $x \leq y$ and $0 leq z$, then $x \times z \leq y \times z$.\\
 The integer $b$ is a \textbf{lower bound} for a set $X \subseteq \mathbb{Z}$ if $b \leq x$ for all $x \in X$.\\
 If a non-empty set $S \subseteq \mathbb{Z}$ has a lower bound, then $S$ has a least member.\\
+\textbf{DIVISIBILITY AND PRIME NUMBERS}\\
 Given positive integers $a$ and $b$ there exist $q$ and $r$ in $\mathbb{N}_0$ such that $a = bq + r$ and $0 \leq r \leq b$. \\
 If $a$ and $b$ are positive integers (or zero) we say that $d$ is the \textbf{greatest common divisor (gcd)} of $a$ and $b$ provided that (i) $d|a$ and $d|b$; (ii) if $c|a$ and $c|b$, then $c \leq d$.\\
 Let $a$ and $b$ be positive integers, and let $d = gcd(a,b)$. Then there are integers $m$ and $n$ such that $d = ma + nb$.\\
 If $gcd(a,b) = 1$ then we say that $a$ and $b$ are \textbf{coprime}. In this case the Theorem asserts that there are integers $m$ and $n$ such that $ma + nb = 1$.\\
 A positive integer $p$ is a \textbf{prime} if $p \geq 2$ and the only positive integers which divide $p$ are 1 and $p$ itself.\\
 If $p$ is a prime and $x_1, x_2, \dotsc ,x_n$ are any integers such that $p|x_1 x_2 \dots x_n$ then $p|x_i$ for some $x_i(1 \leq i \leq n)$.\\
-(The Fundamental Theorem of Arithmetic) A positive integer $n \geq 2$ has a unique prime factorization, apart from the order of the factors.\\
+(The Fundamental Theorem of Arithmetic) A positive integer $n \geq 2$
+has a unique prime factorization, apart from the order of the
+factors.\\
+\textbf{FRACTIONS AND REAL NUMBERS}\\
 $\frac{a}{c} \oplus \frac{c}{d} = \frac{ad + bc}{bd}$\\
 $\left( \frac{a}{b} \right)^{-1} = \frac{b}{a} (a,b \neq 0)$\\
 Between any two rational numbers there is another one.\\
 There are no natural numbers $m, n$ such that $m^2 =2n$.\\
 Example: 0.5734 meaning $\frac{5}{10} + \frac{7}{100} + \frac{3}{1000}
 + \frac {4}{10000}$.\\
-The set of $mathbb{Q}$ of rational numbers is countable.\\
+The set of $\mathbb{Q}$ of rational numbers is countable.\\
+\textbf{PRINCIPLES OF COUNTING}\\
 If $A$ and $B$ are non-empty finite sets, and $A$ and $B$ are disjoint
 (that is $A \cap B = \varnothing$, the empty set), then $|A \cup B| =
 |A| + |B|$.\\
@@ -169,6 +179,7 @@ for all $r$ in $\mathbb{N}_{n}$, is a permutation and for any $\sigma$
 in $S_{n}$ we have $id \sigma = \sigma id = \sigma$.
 (iv) For every permutation $\pi$ in $S_{n}$ there is an inverse
 permutation $\pi^{-1} = \pi^{-1}\pi = id$.\\
+\textbf{SUBSETS}\\
 \textit{Unordered selection without repetition}: $\binom{n}{r}$ spoken
 \textit{n choose r}. \\
 If $n$ and $r$ are positive integers satisfying $1 \leq r \leq n$ then
@@ -191,6 +202,11 @@ If $A_{1},A_{2},\dots,A_{n}$ are finite sets then $|A_{1} \cup A_{2}
 \alpha_{1}-\alpha_{2}+\alpha_{3}-\dots+(-1)^{n-1}\alpha_{n}$, where
 $\alpha_{i}$ is the sum of the cardinalities of the intersections of
 the sets taken $i$ at a time $(1 \leq i \leq n)$.\\
+Let $n \leq 2$ be an integer whose prime factorization is $n =
+p_{1}^{e_{1}}p_{2}^{e_{2}}\dots p_{r}^{e_{r}}$. Then $\phi (n) =
+n(1-\frac{1}{p_{1}})(1- \frac{1}{p_{2}})\dots (1- \frac{1}{p_{r}})$.
+
+\textbf{PARTITION, CLASSIFICATION, DISTRIBUTION}\\
 Let $S(n,k)$ denote the number of partitions of an n-set $X$ into $k$
 parts, where $1 \leq k \leq n$. Then $S(n,1) = 1$, $S(n,n) = 1$,
 $S(n,k) = S(n-1, k-1) + kS(n-1,k)$ $(2 \leq k \leq n-1)$.\\
@@ -211,6 +227,7 @@ For any positive integers $n$ and $k$ $(x_{1}+ x_{2} + \dots
   ,n_{k}} x_{1}^{n_{1}} x_{2}^{n_{2}} \dots x_{k}^{n_{k}}$, where the sum
     is taken over all k-tuples of non-negative integers $(n_{1},
     n_{2}, \dots, n_{k})$ such that $n_{1}+n_{2}+ \dots + n_{k} = n$.\\   
+\textbf{MODULAR ARITHMETIC}\\
 Let $x_{1}$ and $x_{2}$ be integers, and $m$ a positive integer. We
 say that $x_{1}$ is \textbf{congruent} to $x_{2}$ \textbf{modulo} $m$,
 and write $x_{1} \equiv x_{2}$ (mod $m$) whenever $x_{1} - x_{2}$ is
@@ -258,6 +275,7 @@ $f(n)$ is $O(g(n))$ if there is a positive constant $k$ such that
 $f(n) \leq kg(n)$ for all $n$ in $\mathbb{N}$ (with possibly a finite
 number of exceptions). The symbol $(O(g(n))$ is pronounced `big-oh of
 $g(n)$'\\
+\textbf{ALGORITHMS AND THEIR EFFICIENCY}\\
 \textbf{bubblesort} Compare adjacent terms in the list and switch them
 if they are in the wrong order. The operations involved in bubble sort
 are comparisons and switches. At the $j$th path, $n-m$ comparisons are
@@ -268,6 +286,7 @@ the list $L = (x_{1})$ and insert $x{i}$ in its correct place in the
 list for $i = 2,3,\dots ,n$. Insertions can be done
 \textbf{sequential} or preferentially by the \textbf{bisection}
 method.\\
+\textbf{GRAPHS}\\
 A \textbf{graph $G$} consists of a finite set $V$, whose members are
 called \textbf{vertices}, and a set $E$ of 2-subsets of $V$, whose
 members are called \textbf{edges}. We usually write $G = (V,E)$ and
@@ -321,6 +340,7 @@ first color not in $S$.\\
 If $G$ is a graph with maximum degree $k$, then (i) $\chi(G) \leq k +
 1$, (ii) if $G$ is connected and not regular, $\chi(G) \leq k$.\\
 A graph is bipartite if and only if it contains no cycles with odd length.\\
+\textbf{TREES, SORTING, SEARCHING}\\
 A vertex in a rooted tree is said to be a \textbf{leaf} if it is at
 level $i (i \geq 0)$ and it is not adjacent to any vertices at level
 $i + 1$. A vertex which is not a leaf is an \textbf{internal}
@@ -355,6 +375,7 @@ and let $T$ be  the subset of the edges of $G$ constructed according
 to the BFS algorithm. Then $T$ is a spanning tree for the component of
 $G$ which contains $v$. (Queue procedure)\\
 \textbf{shortest path problem} Dijkstras algorithm, greedy\\
+\textbf{BIPARTITE GRAPHS AND MATCHINGS}\\
 Let $G = (X \cup Y, E)$ be a bipartite graph and let $\delta(v)$
 denote the degree of a vertex $v$ in $G$. Then $\displaystyle\sum_{x
   \in X} \delta(x) = \displaystyle\sum_{y \in Y} \delta(y) = |E|$.\\
