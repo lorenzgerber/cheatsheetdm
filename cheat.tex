@@ -75,78 +75,227 @@
 \setlength{\columnsep}{2pt}
 
 \textbf{NATURAL NUMBERS}\\
-$a+b \in \mathbb{N}$\\
-$a \times b \in \mathbb{N}$\\
-$a + b = b + a$\\
-$(a + b) + c = a + (b + c)$\\
-$n \times 1 = n for all n \in \mathbb{N}$\\
-$if m \times z = n \times z for some z \in \mathbb{N} then m = n$\\
-$a \times (b + c) = (a \times b) + (a \times c)$\\
-$m$ is a multiple of $n$ if there is a natural number $r$ such that $m = rn$\\
-If $a$ and $b$ are multiplies of $n$ the, for all $x, y \in \mathbb{N}, xa + yb$ is $a$ a multiple of $n$\\
-For any natural numbers $m$ and $n$, the statement $m < n$ means that there is some $x \in \mathbb{N}$ such that $m + x = n$\\
+
+$a+b \in \mathbb{N}$ closure\\
+
+
+$a \times b \in \mathbb{N}$ closure\\
+
+$a + b = b + a$ commutative\\
+
+$(a + b) + c = a + (b + c)$ assosciative\\
+
+$n \times 1 = n for all n \in \mathbb{N}$ multiplicative identity\\ 
+
+if $m \times z = n \times z$ for some $z \in \mathbb{N}$ then $m =
+n$\\ 
+
+$a \times (b + c) = (a \times b) + (a \times c)$ distributive\\
+
+$m$ is a \textbf{multiple} of $n$ if there is a natural number $r$
+such that $m = rn$\\ 
+
+If $a$ and $b$ are multiples of $n$ the, for all $x, y \in \mathbb{N},
+xa + yb$ is $a$ a multiple of $n$\\ 
+
+For any natural numbers $m$ and $n$, the statement $m < n$ means that
+there is some $x \in \mathbb{N}$ such that $m + x = n$\\ 
+
 If $a < b$ and $b < c$ then $a < c$\\
+
 Given any natural numbers $m$ and $n$, exactly one of the three
 statements $m<n, m=n, n<m$ is true.\\
+
 Suppose that P(n) is a statement with the following properties:\\
+
 (i) $P(1)$ is true; \textit{induction basis}\\
-(ii) if $P(k)$ is true (\textit{induction hypothesis}) then $P(k+1)$ (\textit{induction step}) is true for every $k \in \mathbb{N}$.\\ 
+
+(ii) if $P(k)$ is true (\textit{induction hypothesis}) then $P(k+1)$
+(\textit{induction step}) is true for every $k \in \mathbb{N}$.\\  
+
 Then $P(n)$ is true for all $n \in \mathbb{N}$\\
-strong: (ii) assume $P(i) 1 \leq i \leq k$ is true then $P(k+1)$ is true for every $k \in \mathbb{N}$\\
-Let $X$ be a subset of $\mathbb{N}$. An element $l \in X$ is a \textbf{least member} of $X$ if $l \leq x$ for all $x \in X$. An element $g \in X$ is a \textbf{greatest member} of $X$ if $g \geq x$ for all $x \in X$. Often $l$ and $g$ are referred to as the \textbf{minimum} and \textbf{maximum} of $X$.\\
-Every non-empty subset of $X$ of $\mathbb{N}$ has a least member.\\
+
+strong: (ii) assume $P(i) 1 \leq i \leq k$ is true then $P(k+1)$ is
+true for every $k \in \mathbb{N}$\\ 
+
+Let $X$ be a subset of $\mathbb{N}$. An element $l \in X$ is a
+\textbf{least member} of $X$ if $l \leq x$ for all $x \in X$. An
+element $g \in X$ is a \textbf{greatest member} of $X$ if $g \geq x$
+for all $x \in X$. Often $l$ and $g$ are referred to as the
+\textbf{minimum} and \textbf{maximum} of $X$.\\ 
+
+archetype of recursive def: $A_{n} =
+\displaystyle\sum_{i=1}^{n}a_{i}$\\ 
+
+$A_{k+1}=\displaystyle\sum_{i =
+  1}^{k+1}a_{i}=\displaystyle\sum_{i=1}^k{}a_{i}+a_{k+1}$\\ 
+
+Every non-empty subset of $X$ of $\mathbb{N}$ has a least member.\\ 
+
 \textbf{FUNCTIONS}\\
-Suppose that $X$ and $Y$ are sets. We say that we have a \textbf{function} $f$ \textbf{from} $X$ \textbf{to} $Y$ if for each $x$ in $X$ we can specify a unique element in $Y$, which we denote by $f(x)$.\\
-The function $f$ from $X$ to $Y$ is a \textbf{surjection} if every $y$ in $Y$ is a value $f(x)$ for at least one $x$ in $X$. It is an \textbf{injection} if every $y$ in $Y$ is a value $f(x)$ for at most one $x$ in $X$. It is a \textbf{bijection} if it is both a surjection and an injection, that is, if every $y$ in $Y$ is a value $f(x)$ for exactly one $x$ in $X$.\\
-For any set $X$ the function $i : X \to X$ defined by $i(x) = x$ for all $x \in X$ is called the \textbf{identity} function on $X$. If $X$ is a subset of $Y$, the function $j : X \to Y$ defined by $j(x) = x$ is called the \textbf{inclusion} function from $X$ to $Y$.\\
-If $f : X \to Y$ and $g : Y \to Z$ are injections, then so is the composite $gf : X \to Z$. If $f$ and $g$ are surjections then so is $gf$. if $f$ and $g$ are bijections then so is $gf$.\\
-A function $f : X \to Y$ has an \textbf{inverse} function $g : Y \to X$ if, for all $x$ in $X$ and $y$ in $Y$ $(gf)(x) = x, (fg)(y) = y$. In other words $gf$ is the identity function on $X$ and $fg$ is the identity function on $Y$.\\
+Suppose that $X$ and $Y$ are sets. We say that we have a
+\textbf{function} $f$ \textbf{from} $X$ \textbf{to} $Y$ if for each
+$x$ in $X$ we can specify a unique element in $Y$, which we denote by
+$f(x)$.\\ 
+
+The function $f$ from $X$ to $Y$ is a \textbf{surjection} if every $y$
+in $Y$ is a value $f(x)$ for at least one $x$ in $X$. It is an
+\textbf{injection} if every $y$ in $Y$ is a value $f(x)$ for at most
+one $x$ in $X$. It is a \textbf{bijection} if it is both a surjection
+and an injection, that is, if every $y$ in $Y$ is a value $f(x)$ for
+exactly one $x$ in $X$.\\ 
+
+For any set $X$ the function $i : X \to X$ defined by $i(x) = x$ for
+all $x \in X$ is called the \textbf{identity} function on $X$. If $X$
+is a subset of $Y$, the function $j : X \to Y$ defined by $j(x) = x$
+is called the \textbf{inclusion} function from $X$ to $Y$.\\ 
+
+If $f : X \to Y$ and $g : Y \to Z$ are injections, then so is the
+composite $gf : X \to Z$. If $f$ and $g$ are surjections then so is
+$gf$. if $f$ and $g$ are bijections then so is $gf$.\\ 
+
+A function $f : X \to Y$ has an \textbf{inverse} function $g : Y \to
+X$ if, for all $x$ in $X$ and $y$ in $Y$ $(gf)(x) = x, (fg)(y) =
+y$. In other words $gf$ is the identity function on $X$ and $fg$ is
+the identity function on $Y$.\\
+
 A function has an inverse if and only if it is a bijection.\\
+
 \textbf{HOW TO COUNT}\\
-Let $m$ be a natural number. Then the following statement is true for every natural number $n$: if there is an injection from $\mathbb{N}_n to \mathbb{N}_m$, then $n \leq m$.\\ 
-If there is a bijective correspondence between $S$ and $\mathbb{N}_m$ then we say that $S$ has size, or cardinality, $m$ and we write $|S| = m$.\\
-If a set $S$ is such that $|S| = s$ and $|S| = t$, then $s = t$.\\
-A set $S$ is \textbf{finite} if it is empty of if $|S| = n$ for some $n \in \mathbb{N}$. A set which is not finite is said to be \textbf{inifite}.\\
-The set $\mathbb{N}$ is infinite.\\
-If the set $S$ is such that there is a bijection $b : \mathbb{N} \to S$, then $S$ is infinite.\\
+Let $m$ be a natural number. Then the following statement is true for
+every natural number $n$: if there is an injection from $\mathbb{N}_n$
+to $\mathbb{N}_m$, then $n \leq m$.\\ 
+
+If there is a bijective correspondence between $S$ and $\mathbb{N}_m$
+then we say that $S$ has size, or cardinality, $m$ and we write $|S| =
+m$.\\
+
+If a set $S$ is such that $|S| = s$ and $|S| = t$, then $s = t$. (both
+are bijections, hence have inverse)\\
+
+A set $S$ is \textbf{finite} if it is empty of if $|S| = n$ for some
+$n \in \mathbb{N}$. A set which is not finite is said to be
+\textbf{inifite}.\\
+
+The set $\mathbb{N}$ is infinite. (proof, if finite -> make ordered
+list, sum not included) \\
+
+
+If the set $S$ is such that there is a bijection $b : \mathbb{N} \to
+S$, then $S$ is infinite.\\
+
+definitions regarding properties of infinite sets: finite, countable,
+uncountable\\
+
+
 \textbf{INTEGERS}\\
-A \textbf{relation} $R$ on a set $X$ is a set of ordered pairs of members of $X$.\\
-reflexive $xRx$, symmetric $xRy$, transitive $xRy$ and $yRz$ hence $xRz$\\
-An \textbf{equivalence relation} is a relation that is reflexive, symmetric and transitive.\\
-Let $R$ be an equivalence relation on $X$. A non-empty set $C \subseteq X$ is an \textbf{equivalence class} with respect to $R$ if\\
+integer eq. class def: $(a,b)R(c,d)$ means $a + d = b + c$\\
+def addition: $[a,b] + [c,d] = [a + c, b + d]$\\
+def multiplic.: $[a,b] + [c,d] = [ac + bd, ad + bc]$\\
+
+A \textbf{relation} $R$ on a set $X$ is a set of ordered pairs of
+members of $X$.\\
+
+
+reflexive $xRx$, symmetric $xRy$, transitive $xRy$ and $yRz$ hence
+$xRz$\\
+
+An \textbf{equivalence relation} is a relation that is \textbf{reflexive},
+\textbf{symmetric} and \textbf{transitive}.\\
+
+Let $R$ be an equivalence relation on $X$. A non-empty set $C
+\subseteq X$ is an \textbf{equivalence class} with respect to $R$ if\\
+
 (i) any two members of $C$ are $R$-related; and\\
-(ii) $C$ contains every member of $X$ that is $R$-related to any member of $C$.\\
+
+(ii) $C$ contains every member of $X$ that is $R$-related to any
+member of $C$.\\
+
 in symbols, $C$ is such that,\\
-if $x \in C$ then $y \in C \iff xRy$\\ 
-Given an equivalence relation $R$ on $X$, every member of $X$ is one and only one equivalence class (with respect to $R$).\\
-$x + 0 = x$ for every $x \in \mathbb{Z}$//
+if $x \in C$ then $y \in C \iff xRy$\\
+
+Given an equivalence relation $R$ on $X$, every member of $X$ is one
+and only one equivalence class (with respect to $R$).\\
+
+$x + 0 = x$ for every $x \in \mathbb{Z}$\\
+
 If $x \times z = y \times z$ and $z \neq 0$ then $x = y$\\
-For any $x \in \mathbb{Z}$ there is an element $-x$ of $\mathbb{Z}$ such that $x +(-x)=0$.\\
-If $x \leq y$ and $0 leq z$, then $x \times z \leq y \times z$.\\
-The integer $b$ is a \textbf{lower bound} for a set $X \subseteq \mathbb{Z}$ if $b \leq x$ for all $x \in X$.\\
-If a non-empty set $S \subseteq \mathbb{Z}$ has a lower bound, then $S$ has a least member.\\
+
+For any $x \in \mathbb{Z}$ there is an element $-x$ of $\mathbb{Z}$
+such that $x +(-x)=0$.\\
+
+If $x \leq y$ and $0 \leq z$, then $x \times z \leq y \times z$.\\
+
+The integer $b$ is a \textbf{lower bound} for a set $X \subseteq
+\mathbb{Z}$ if $b \leq x$ for all $x \in X$.\\
+
+If a non-empty set $S \subseteq \mathbb{Z}$ has a lower bound, then
+$S$ has a least member.\\
+
+
 \textbf{DIVISIBILITY AND PRIME NUMBERS}\\
-Given positive integers $a$ and $b$ there exist $q$ and $r$ in $\mathbb{N}_0$ such that $a = bq + r$ and $0 \leq r \leq b$. \\
-If $a$ and $b$ are positive integers (or zero) we say that $d$ is the \textbf{greatest common divisor (gcd)} of $a$ and $b$ provided that (i) $d|a$ and $d|b$; (ii) if $c|a$ and $c|b$, then $c \leq d$.\\
-Let $a$ and $b$ be positive integers, and let $d = gcd(a,b)$. Then there are integers $m$ and $n$ such that $d = ma + nb$.\\
-If $gcd(a,b) = 1$ then we say that $a$ and $b$ are \textbf{coprime}. In this case the Theorem asserts that there are integers $m$ and $n$ such that $ma + nb = 1$.\\
-A positive integer $p$ is a \textbf{prime} if $p \geq 2$ and the only positive integers which divide $p$ are 1 and $p$ itself.\\
-If $p$ is a prime and $x_1, x_2, \dotsc ,x_n$ are any integers such that $p|x_1 x_2 \dots x_n$ then $p|x_i$ for some $x_i(1 \leq i \leq n)$.\\
+Given positive integers $a$ and $b$ there exist $q$ and $r$ in
+$\mathbb{N}_0$ such that $a = bq + r$ and $0 \leq r \leq b$. \\
+
+If $a$ and $b$ are positive integers (or zero) we say that $d$ is the
+\textbf{greatest common divisor (gcd)} of $a$ and $b$ provided that
+(i) $d|a$ and $d|b$; (ii) if $c|a$ and $c|b$, then $c \leq d$.\\
+
+Let $a$ and $b$ be positive integers, and let $d = gcd(a,b)$. Then
+there are integers $m$ and $n$ such that $d = ma + nb$.\\
+
+If $gcd(a,b) = 1$ then we say that $a$ and $b$ are
+\textbf{coprime}. In this case the Theorem asserts that there are
+integers $m$ and $n$ such that $ma + nb = 1$.\\
+
+A positive integer $p$ is a \textbf{prime} if $p \geq 2$ and the only
+positive integers which divide $p$ are 1 and $p$ itself.\\
+
+If $p$ is a prime and $x_1, x_2, \dotsc ,x_n$ are any integers such
+that $p|x_1 x_2 \dots x_n$ then $p|x_i$ for some $x_i(1 \leq i \leq
+n)$.\\
+
 (The Fundamental Theorem of Arithmetic) A positive integer $n \geq 2$
 has a unique prime factorization, apart from the order of the
 factors.\\
+
+Algorithm \textbf{Eratosthenes sieve}, on a finite list of numbers.\\
+
+
+
 \textbf{FRACTIONS AND REAL NUMBERS}\\
 $\frac{a}{c} \oplus \frac{c}{d} = \frac{ad + bc}{bd}$\\
+
 $\left( \frac{a}{b} \right)^{-1} = \frac{b}{a} (a,b \neq 0)$\\
+
 Between any two rational numbers there is another one.\\
+
 There are no natural numbers $m, n$ such that $m^2 =2n$.\\
+
 Example: 0.5734 meaning $\frac{5}{10} + \frac{7}{100} + \frac{3}{1000}
 + \frac {4}{10000}$.\\
-The set of $\mathbb{Q}$ of rational numbers is countable.\\
+
+The set of $\mathbb{Q}$ of rational numbers is countable. Proof array
+with numerator and denominator as x,y\\
+
+The set of $\mathbb{R}$ of real numbers is uncountable. Proof list of
+numbers with numbered decimal parts.\\
+
+Ex. $a = 0.31\overline{579}$. Take $b-0.\overline{579}$\\
+
+$1000b-b=999b \rightarrow 579.\overline{579}-0.\overline{579}=579$\\
+
+$\rightarrow 999b=579 \rightarrow b=\frac{579}{999}$\\
+$a=0.31\overline{579}$\\
+$100a=31.\overline{579}$\\
+$100a-31=0.\overline{579}=b=\frac{579}{999}$ solve for a\\
+
 \textbf{PRINCIPLES OF COUNTING}\\
+
 If $A$ and $B$ are non-empty finite sets, and $A$ and $B$ are disjoint
 (that is $A \cap B = \varnothing$, the empty set), then $|A \cup B| =
-|A| + |B|$.\\
+|A| + |B|$. Addition principle\\
+
 Let $X$ and $Y$ be finite non-empty sets, and let $S$ be a subset of
 $X \times Y$. Then the following results hold.
 (i) The size of $S$ is given by $|S| = \displaystyle\sum_{x \in X} r_{x}(S) =
@@ -156,10 +305,13 @@ are the row and column totals as described above.
 is a constant $c$, independent of $y$, then $r|X| = c|Y|$.
 (iii) (The multiplication principle) The size of $X \times Y$ is given
 by $|X \times Y| = |X| \times |Y|$.\\
+
 \textbf{Eulers's function}: let $\phi(n)$ denote the number of
 integers $x$ in the range $1 \leq x \leq n$ such that $x$ and $n$ are
 coprime. $\phi(p) = p-1$ ($p$ prime).\\
+
 For any positive integer $n$, $\displaystyle\sum_{d|n} \phi(d)=n$.\\
+
 Let $X$ and $Y$ be non-empty finite sets, and let $F$ denote the set
 of functions from $X$ to $Y$. if $|X| = m$ and $|Y| = n$, then $|F| =
 n^{m}$. Equivalently, we may say that the number of words of length
@@ -167,9 +319,12 @@ $m$ in an alphabet $Y$ of $n$ symbols is $n^{m}$. In general we can
 say that a funciton from $\mathbb{N}_{m}$ to $Y$ is a mathematical
 model of an \textit{ordered selection with repetition of $m$ things
   from the set $Y$}.\\
+
 The number of ordered selections, without repetition, of $m$ things
 from a set $Y$ of size $n$ is the same as the number of injections
-from $\mathbb{N}_{m}$ to $Y$, and is given by $n(n-1)(n-2)\dots(n-m+1)$.\\
+from $\mathbb{N}_{m}$ to $Y$, and is given by
+$n(n-1)(n-2)\dots(n-m+1)$.\\
+
 The following properties hold in the set $S_{n}$ of all permutations
 of $\{1,2,\dots,n\}$. (i) If $\pi$ and $\sigma$ are in $S_{n}$, so is
 $\pi\sigma$. (ii) For any permutations $\pi, \sigma, \tau$ in $S_{n}$,
@@ -179,6 +334,7 @@ for all $r$ in $\mathbb{N}_{n}$, is a permutation and for any $\sigma$
 in $S_{n}$ we have $id \sigma = \sigma id = \sigma$.
 (iv) For every permutation $\pi$ in $S_{n}$ there is an inverse
 permutation $\pi^{-1} = \pi^{-1}\pi = id$.\\
+
 \textbf{SUBSETS}\\
 \textit{Unordered selection without repetition}: $\binom{n}{r}$ spoken
 \textit{n choose r}. \\
@@ -236,7 +392,7 @@ Let $m$ be a positive integer and $x_{1}, x_{2}, y_{1}, y_{2}$
 integers such that $x_{1} \equiv x_{2}$ (mod $m$), $y_{1} \equiv y_{2}$
 (mod $m$). Then (i) $x_{1} + y_{1} \equiv x_{2} + y_{2}$ (mod $m$), (ii)
 $x_{1}y_{1} \equiv x_{2}y_{2}$ (mod $m$).\\
-The set of \textbf{integers modulo m}, written as $mathbb{Z}_{m}$, is
+The set of \textbf{integers modulo m}, written as $\mathbb{Z}_{m}$, is
 the set of distinct equivalence classes under the relation of
 congurence modulo $m$ in $\mathbb{Z}$.\\
 The operations $\oplus$ and $\otimes$ satisfy the following rules,
@@ -327,7 +483,7 @@ each pair of $x,y$ of vertices there is a unique path in $T$ from $x$
 to $y$, (T4) the graph obtained from $T$ by removing any edge has two
 components, each of which is a tree; (T5) $|E| = |V|-1$\\
 A \textbf{vertex coloring} of a graph $G = (V,E)$ is a function $c: V
-\to \mathbb{N}$ with the property that $c(x) /neq c(y)$ whenever
+\to \mathbb{N}$ with the property that $c(x) \neq c(y)$ whenever
 $\{x,y\} \in E$. The \textbf{chromatic number} of $G$, written
 $\chi(G)$, is defined to be the least integer $k$ for which there is a
 vertex coloring of $G$ using $k$ colors.\\
@@ -402,8 +558,8 @@ We shall say that a matching $M$ is a \textbf{maximum matching} for $G
 If $G = (X \cup Y, E)$ and $A$ is a subset of $X$, let $J(A) = \{y \in
 Y | xy \in E$ for some $x \in A\}$ so that $J(A)$ is the set of jobs
 for which the people in $A$ are collectively qualified.\\
-The bipartite graph $G = (X \cup Y, E)$ hasd a complete matching if an
-oly if Hall's condition is satisfied, that is $|J(A)| \geq |A|$ for
+The bipartite graph $G = (X \cup Y, E)$ has a complete matching if an
+only if Hall's condition is satisfied, that is $|J(A)| \geq |A|$ for
 all $A \subseteq X$.\\ 
 
 
